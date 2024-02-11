@@ -3,11 +3,22 @@
 class Engine
 {
 private:
-    int _width;
-    int _height;
+    /// Shading:
+    unsigned int _vertexShader;
+    unsigned int _fragmentShader;
+    unsigned int _shaderProgram;
+    GLuint VBO, VAO;
+    void setShaderProgram();
+    GLFWwindow *_win;
     std::vector<float> _wRange;
     std::vector<float> _hRange;
-    GLFWwindow *_win;
+
+    /// Window:
+    int _width;
+    int _height;
+    std::vector<float> _vertices;
+
+    //private methods
     int hookSystem();
 public:
     Engine(int w, int h, std::string windowsName);

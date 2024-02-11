@@ -4,7 +4,8 @@
 
 int main(void)
 {
-	Engine win = Engine(300, 300, "RayMesh");
+	Engine win = Engine(1280, 720, "RayMesh");
 
+	std::cout << "Hello, World!" << std::endl;
 	win.Loop();
 }
